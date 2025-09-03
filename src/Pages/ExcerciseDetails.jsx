@@ -25,7 +25,7 @@ function ExcerciseDetails() {
         if (data.data && data.data.name) {
           setVideosLoading(true);
           try {
-            const videosData = await fetchVideos(`https://youtube-search-and-download.p.rapidapi.com/search?query=${encodeURIComponent(data.data.name)}&hl=en&gl=US&type=v&duration=s&sort=v` , videosOptions)
+            const videosData = await fetchVideos(`https://youtube-search-and-download.p.rapidapi.com/search?query=${encodeURIComponent(`how to workout ${data.data.name} excercise`)}&hl=en&gl=US&type=v&duration=s&sort=v`, videosOptions); 
             setVideosData(videosData);
           } catch (videoError) {
             console.log('Failed to fetch videos, continuing without them:', videoError);

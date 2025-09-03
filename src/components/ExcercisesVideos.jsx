@@ -16,7 +16,7 @@ function ExcercisesVideos({excerciseDetail , videosData , videosLoading}) {
         </div>
       ) : (
         <div className="videos-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {videosData.contents && videosData.contents.slice(0, 4).map((video) => (
+          {videosData.contents && videosData.contents.slice(0, 8).map((video) => (
             <div key={video.video.videoId} className="video-card bg-[#26303B] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative">
                 <img 
